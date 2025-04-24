@@ -137,7 +137,7 @@ function Home() {
     playsInline
     className="hero-video-bg"
   >
-    <source src="/videos/Sheba.mp4" type="video/mp4" />
+    <source src="/videos/new1.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
   <div className="hero-content">
@@ -174,15 +174,7 @@ function Home() {
         <h2>Travel Gallery</h2>
         <p>Capture the beauty of Ethiopia through our lens</p>
         <div className="gallery-grid">
-          <img src={bale}alt="Lalibela Churches" />
-          <img src={two} alt="Simien Mountains" />
-          <img src={three} alt="Ethiopian Coffee Ceremony" />
-          <img src={four} alt="Traditional Ethiopian Food" />
-          <img src={five} alt="Axum Obelisk" />
-          <img src={six} alt="Gondar Castle" />
-          <img src={seven} alt="Danakil Depression" />
-          <img src={eight} alt="Ethiopian Wildlife" />
-          <img src={nine} alt="Local Market" />
+      
           <img src={ten} alt="Traditional Dance" />
          
         </div>
