@@ -1,0 +1,98 @@
+.services {
+  padding-top: 80px;
+}
+
+.services-header {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+              url('https://images.unsplash.com/photo-1523805009345-7448845a9e53?ixlib=rb-4.0.3');
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.services-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-image img {
+  transform: scale(1.1);
+}
+
+.service-content {
+  padding: 1.5rem;
+}
+
+.service-content h2 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.service-content p {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.learn-more {
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more:hover {
+  background-color: #34495e;
+}
+
+@media (max-width: 768px) {
+  .services-header {
+    height: 200px;
+  }
+  
+  .services-header h1 {
+    font-size: 2rem;
+  }
+}

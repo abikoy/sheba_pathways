@@ -1,0 +1,128 @@
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #009B3A, #FEDD00, #EF2B2D);
+  z-index: 9999;
+  animation: fadeOut 0.5s ease-in-out forwards;
+  animation-delay: 3s;
+}
+
+.airplane-loader {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.loader-plane {
+  width: 80px;
+  height: 80px;
+  color: white;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.7));
+  animation: planeAnimation 3s ease-in-out forwards;
+}
+
+.airplane-loader img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform-origin: center;
+  filter: drop-shadow(0 0 25px rgba(218, 0, 0, 0.8)) 
+         drop-shadow(0 0 50px rgba(255, 199, 44, 0.8)) 
+         drop-shadow(0 0 75px rgba(0, 155, 58, 0.8));
+}
+
+.loading-text {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1rem;
+  animation: fadeInOut 3s ease-in-out forwards;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes planeAnimation {
+  0% {
+    transform: translate(0, 0) scale(0.5);
+    opacity: 0;
+  }
+  20% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  40% {
+    transform: translate(0, 0) rotate(360deg);
+  }
+  60% {
+    transform: translate(0, 0) rotate(720deg);
+  }
+  80% {
+    transform: translate(20vw, -20vh) rotate(765deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(50vw, -50vh) rotate(765deg);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(-15deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}

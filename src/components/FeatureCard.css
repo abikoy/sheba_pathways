@@ -1,0 +1,83 @@
+.feature-card {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.guesthouse-icon-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-main {
+  font-size: 2.5rem;
+  color: #2d3748;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon-secondary {
+  position: absolute;
+  font-size: 1.5rem;
+  color: #4a5568;
+  bottom: -5px;
+  right: -5px;
+  transform: rotate(-15deg);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.feature-card:hover .icon-main {
+  color: #1a73e8;
+  transform: translateY(-3px);
+}
+
+.feature-card:hover .icon-secondary {
+  color: #34a853;
+  transform: rotate(0deg) scale(1.1);
+}
+
+.feature-icon svg {
+  width: 100%;
+  height: 100%;
+  color: #1a73e8;
+}
+
+.feature-title {
+  font-size: 1.5rem;
+  color: #2d3748;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.feature-description {
+  color: #718096;
+  line-height: 1.6;
+  font-size: 1rem;
+}

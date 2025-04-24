@@ -1,0 +1,78 @@
+.about {
+  padding-top: 80px;
+}
+
+.about-header {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+              url('../assets/beauty.avif');
+  background-position: center; 
+  background-size: contain;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-text {
+  color: #2c3e50;
+}
+
+.about-text h2 {
+  margin-bottom: 2rem;
+  color: #2c3e50;
+}
+
+.about-text h3 {
+  margin: 2rem 0 1rem;
+  color: #34495e;
+}
+
+.about-text ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.about-text li {
+  padding: 0.5rem 0;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.about-text li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #27ae60;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .about-image {
+    order: -1;
+  }
+  
+  .about-image img {
+    height: 300px;
+  }
+}
