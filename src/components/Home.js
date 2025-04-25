@@ -28,20 +28,6 @@ import isru from "../assets/isru.jpg";
 import haile from '../assets/hai.jpg';
 import miki from '../assets/miki.png'
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function Home() {
   const destinations = [
     { name: 'Simien Mountains National Park', places: 15, hotels: 18, image: semien, description: 'Spectacular mountain scenery and home to endangered species' },
@@ -78,10 +64,12 @@ function Home() {
       role: "Photographer"
     }
   ];
+  const images = [one, two, three, four, five, six, seven, eight, nine, ten];
 
   const [isLoading, setIsLoading] = useState(true);
   const [isHovered, setIsHovered] = React.useState(false);
   const sliderRef = React.useRef(null);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   useEffect(() => {
     const hasVisited = sessionStorage.getItem('hasVisited');
@@ -170,15 +158,23 @@ function Home() {
         </div>
       </section>
 
-      <section className="travel-gallery">
-        <h2>Travel Gallery</h2>
-        <p>Capture the beauty of Ethiopia through our lens</p>
-        <div className="gallery-grid">
-      
-          <img src={ten} alt="Traditional Dance" />
-         
-        </div>
-      </section>
+      <section className="travel-gallery py-12 px-4 md:px-16 bg-white text-center">
+  <h2 className="text-3xl font-bold mb-2 text-gray-800">Travel Gallery</h2>
+  <p className="text-gray-600 mb-8">Capture the beauty of Ethiopia through our lens</p>
+  
+  <div className="gallery-grid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+    <img src={one} alt="Gallery One" className="rounded-lg shadow-md hover:scale-105 transition-transform duration-300" />
+    <img src={two} alt="Gallery Two" className="rounded-lg shadow-md hover:scale-105 transition-transform duration-300" />
+    <img src={three} alt="Gallery Three" className="rounded-lg shadow-md hover:scale-105 transition-transform duration-300" />
+    <img src={four} alt="Gallery Four" className="rounded-lg shadow-md hover:scale-105 transition-transform duration-300" />
+    <img src={five} alt="Gallery Five" className="rounded-lg shadow-md hover:scale-105 transition-transform duration-300" />
+    <img src={six} alt="Gallery Six" className="rounded-lg shadow-md hover:scale-105 transition-transform duration-300" />
+    <img src={seven} alt="Gallery Seven" className="rounded-lg shadow-md hover:scale-105 transition-transform duration-300" />
+    <img src={eight} alt="Gallery Eight" className="rounded-lg shadow-md hover:scale-105 transition-transform duration-300" />
+    <img src={nine} alt="Gallery Nine" className="rounded-lg shadow-md hover:scale-105 transition-transform duration-300" />
+    <img src={ten} alt="Traditional Dance" className="rounded-lg shadow-md hover:scale-105 transition-transform duration-300" />
+  </div>
+</section>
 
       <Features />
 

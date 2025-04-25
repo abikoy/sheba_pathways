@@ -2,19 +2,22 @@ import React from 'react';
 import FeatureCard from './FeatureCard';
 import './Features.css';
 import { FaHotel, FaLocationArrow, FaUserTie, FaMobileAlt, 
-         FaImages, FaUsers, FaStar, FaRoute } from 'react-icons/fa';
+         FaImages, FaUsers, FaStar, FaRoute, 
+         FaMapMarkedAlt} from 'react-icons/fa';
 import { BsFillHouseFill } from 'react-icons/bs';
-import { MdHolidayVillage } from 'react-icons/md';
+import { MdHolidayVillage, MdMap } from 'react-icons/md';
 
 const Features = () => {
   const features = [
     {
-      icon: <div className="guesthouse-icon-wrapper">
-        <MdHolidayVillage className="icon-main" />
-        <BsFillHouseFill className="icon-secondary" />
-      </div>,
-      title: "Integrated Booking Guesthouse",
-      description: "Seamless booking system for easy tour reservations and scheduling."
+      icon: (
+        <div className="guesthouse-icon-wrapper">
+          <MdMap className="icon-main" />
+          <FaMapMarkedAlt className="icon-secondary" />
+        </div>
+      ),
+      title: "Interactive Map Integration",
+      description: "Easily explore and locate destinations across Ethiopia with live map features."
     },
     {
       icon: <FaLocationArrow />,
