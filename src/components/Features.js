@@ -1,11 +1,11 @@
 import React from 'react';
 import FeatureCard from './FeatureCard';
 import './Features.css';
-import { FaHotel, FaLocationArrow, FaUserTie, FaMobileAlt, 
+import {  FaLocationArrow, FaUserTie, FaMobileAlt, 
          FaImages, FaUsers, FaStar, FaRoute, 
          FaMapMarkedAlt} from 'react-icons/fa';
-import { BsFillHouseFill } from 'react-icons/bs';
-import { MdHolidayVillage, MdMap } from 'react-icons/md';
+import {  } from 'react-icons/bs';
+import {  MdMap } from 'react-icons/md';
 
 const Features = () => {
   const features = [

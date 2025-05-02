@@ -14,7 +14,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
-          <img src={logo} alt="Sheba Pathways Logo" />
+          <img src={logo} alt="Sheba Pathways Logo" height='100px'/>
           <span>Sheba Pathways</span>
         </Link>
 

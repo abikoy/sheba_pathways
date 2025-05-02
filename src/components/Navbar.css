@@ -29,6 +29,7 @@
   text-decoration: none;
   color: #000;
   font-weight: bold;
+  margin: 10px;
 }
 
 .navbar-logo span {
@@ -38,6 +39,7 @@
 .navbar-logo img {
   height: 90px;
   width: 100px;
+  margin-top: 8px;
   margin-right: 10px;
   margin-left: 10px;
   transition: transform 0.3s ease;
