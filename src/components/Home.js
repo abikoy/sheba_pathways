@@ -64,12 +64,9 @@ function Home() {
       role: "Photographer"
     }
   ];
-  const images = [one, two, three, four, five, six, seven, eight, nine, ten];
 
   const [isLoading, setIsLoading] = useState(true);
-  const [isHovered, setIsHovered] = React.useState(false);
   const sliderRef = React.useRef(null);
-  const [selectedImage, setSelectedImage] = useState(null);
 
   useEffect(() => {
     const hasVisited = sessionStorage.getItem('hasVisited');
@@ -132,8 +129,8 @@ function Home() {
     <h1>Move The Earth</h1>
     <p>Experience Ethiopia's Ancient Wonders</p>
     <div className="hero-buttons">
-      <a href="#" className="app-button">Download on App Store</a>
-      <a href="#" className="app-button">Get it on Google Play</a>
+      <button className="app-button" onClick={() => {}}>Download on App Store</button>
+      <button className="app-button" onClick={() => {}}>Get it on Google Play</button>
     </div>
   </div>
 </div>
@@ -195,8 +192,6 @@ function Home() {
               <div 
                 key={index} 
                 className="testimonial-card"
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
               >
                 <div className="testimonial-image">
                   <img src={testimonial.img} alt={`Client ${index + 1}`} />
@@ -212,8 +207,6 @@ function Home() {
               <div 
                 key={`duplicate-${index}`} 
                 className="testimonial-card"
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
               >
                 <div className="testimonial-image">
                   <img src={testimonial.img} alt={`Client ${index + 1}`} />
@@ -231,13 +224,15 @@ function Home() {
       <section className="founders">
         <h2>Meet Our Founders</h2>
         <div className="founders-grid">
-          // <div className="founder-card">
-          //   <img src={isru} alt="Founder 1" />
-          //   <h3>Israel Abebaw</h3>
-          //   <p>CEO & Co-founder</p>
-          // </div>
+          {/* 
           <div className="founder-card">
-            <img src={haile}alt="Founder 2" />
+            <img src={isru} alt="Founder 1" />
+            <h3>Israel Abebaw</h3>
+            <p>CEO & Co-founder</p>
+          </div>
+          */}
+          <div className="founder-card">
+            <img src={haile} alt="Founder 2" />
             <h3>Haile Kinfu</h3>
             <p>CTO & Co-founder</p>
           </div>
