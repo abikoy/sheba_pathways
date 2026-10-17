@@ -24,7 +24,7 @@ import eight from "../assets/8t.avif";
 import nine from "../assets/9t.jpg";
 import ten from "../assets/10t.jpg";
 import aman from "../assets/aman.jpg"
-import isru from "../assets/isru.jpg";
+// import isru from "../assets/isru.jpg";
 import haile from '../assets/hai.jpg';
 import miki from '../assets/miki.png'
 
