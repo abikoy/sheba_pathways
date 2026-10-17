@@ -231,11 +231,11 @@ function Home() {
       <section className="founders">
         <h2>Meet Our Founders</h2>
         <div className="founders-grid">
-          <div className="founder-card">
-            <img src={isru} alt="Founder 1" />
-            <h3>Israel Abebaw</h3>
-            <p>CEO & Co-founder</p>
-          </div>
+          // <div className="founder-card">
+          //   <img src={isru} alt="Founder 1" />
+          //   <h3>Israel Abebaw</h3>
+          //   <p>CEO & Co-founder</p>
+          // </div>
           <div className="founder-card">
             <img src={haile}alt="Founder 2" />
             <h3>Haile Kinfu</h3>
