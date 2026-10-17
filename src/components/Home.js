@@ -24,7 +24,6 @@ import eight from "../assets/8t.avif";
 import nine from "../assets/9t.jpg";
 import ten from "../assets/10t.jpg";
 import aman from "../assets/aman.jpg"
-// import isru from "../assets/isru.jpg";
 import haile from '../assets/hai.jpg';
 import miki from '../assets/miki.png'
 
@@ -42,7 +41,6 @@ function Home() {
     { name: 'Gedeo Cultural Landscape', places: 8, hotels: 12, image: gedeo, description: 'Living cultural landscape with traditional farming' },
     { name: 'Bale Mountains National Park', places: 10, hotels: 14, image: bale, description: 'Diverse ecosystem and rare wildlife species' }
   ];
-  
 
   const testimonials = [
     {
@@ -76,7 +74,7 @@ function Home() {
       sessionStorage.setItem('hasVisited', 'true');
       setTimeout(() => {
         setIsLoading(false);
-      }, 3000); // Match this with the CSS animation duration
+      }, 3000);
     }
   }, []);
 
@@ -114,136 +112,121 @@ function Home() {
         <Loader />
       ) : (
         <div className="home">
-     <div className="hero">
-  <video
-    autoPlay
-    loop
-    muted
-    playsInline
-    className="hero-video-bg"
-  >
-    <source src="/videos/new1.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
-  <div className="hero-content">
-    <h1>Move The Earth</h1>
-    <p>Experience Ethiopia's Ancient Wonders</p>
-    <div className="hero-buttons">
-      <button className="app-button" onClick={() => {}}>Download on App Store</button>
-      <button className="app-button" onClick={() => {}}>Get it on Google Play</button>
-    </div>
-  </div>
-</div>
-      
-      <section className="destinations">
-        <h2>11 Ethiopian UNESCO World Heritage Sites</h2>
-        <p>Explore Ethiopia's most remarkable historical and natural wonders</p>
-        <div className="destination-grid">
-          {destinations.map((dest, index) => (
-            <div key={index} className="destination-card">
-              <img src={dest.image} alt={dest.name} />
-              <div className="destination-info">
-                <h3>{dest.name}</h3>
-                <p className="destination-description">{dest.description}</p>
-                <div className="destination-stats">
-                  <span>{dest.places} Places</span>
-                  <span>{dest.hotels} Hotels</span>
-                </div>
+          <div className="hero">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="hero-video-bg"
+            >
+              <source src="/videos/new1.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div className="hero-content">
+              <h1>Move The Earth</h1>
+              <p>Experience Ethiopia's Ancient Wonders</p>
+              <div className="hero-buttons">
+                <button className="app-button" onClick={() => {}}>Download on App Store</button>
+                <button className="app-button" onClick={() => {}}>Get it on Google Play</button>
               </div>
             </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="travel-gallery py-12 px-4 md:px-16 bg-white text-center">
-  <h2 className="text-3xl font-bold mb-2 text-gray-800">Travel Gallery</h2>
-  <p className="text-gray-600 mb-8">Capture the beauty of Ethiopia through our lens</p>
-  
-  <div className="gallery-grid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-    <img src={one} alt="Gallery One" className="rounded-lg shadow-md hover:scale-105 transition-transform duration-300" />
-    <img src={two} alt="Gallery Two" className="rounded-lg shadow-md hover:scale-105 transition-transform duration-300" />
-    <img src={three} alt="Gallery Three" className="rounded-lg shadow-md hover:scale-105 transition-transform duration-300" />
-    <img src={four} alt="Gallery Four" className="rounded-lg shadow-md hover:scale-105 transition-transform duration-300" />
-    <img src={five} alt="Gallery Five" className="rounded-lg shadow-md hover:scale-105 transition-transform duration-300" />
-    <img src={six} alt="Gallery Six" className="rounded-lg shadow-md hover:scale-105 transition-transform duration-300" />
-    <img src={seven} alt="Gallery Seven" className="rounded-lg shadow-md hover:scale-105 transition-transform duration-300" />
-    <img src={eight} alt="Gallery Eight" className="rounded-lg shadow-md hover:scale-105 transition-transform duration-300" />
-    <img src={nine} alt="Gallery Nine" className="rounded-lg shadow-md hover:scale-105 transition-transform duration-300" />
-    <img src={ten} alt="Traditional Dance" className="rounded-lg shadow-md hover:scale-105 transition-transform duration-300" />
-  </div>
-</section>
-
-      <Features />
-
-      <section className="testimonials">
-        <h2>What Our Clients Say About Us</h2>
-        <div className="testimonial-nav">
-          <button className="nav-button prev" onClick={handlePrev}>
-            <span className="arrow">&#8249;</span>
-          </button>
-          <button className="nav-button next" onClick={handleNext}>
-            <span className="arrow">&#8250;</span>
-          </button>
-        </div>
-        <div className="testimonial-grid">
-          <div className="testimonial-slider" ref={sliderRef}>
-            {/* First set of testimonials */}
-            {testimonials.map((testimonial, index) => (
-              <div 
-                key={index} 
-                className="testimonial-card"
-              >
-                <div className="testimonial-image">
-                  <img src={testimonial.img} alt={`Client ${index + 1}`} />
+          </div>
+          
+          <section className="destinations">
+            <h2>11 Ethiopian UNESCO World Heritage Sites</h2>
+            <p>Explore Ethiopia's most remarkable historical and natural wonders</p>
+            <div className="destination-grid">
+              {destinations.map((dest, index) => (
+                <div key={index} className="destination-card">
+                  <img src={dest.image} alt={dest.name} />
+                  <div className="destination-info">
+                    <h3>{dest.name}</h3>
+                    <p className="destination-description">{dest.description}</p>
+                    <div className="destination-stats">
+                      <span>{dest.places} Places</span>
+                      <span>{dest.hotels} Hotels</span>
+                    </div>
+                  </div>
                 </div>
-                <h3>{testimonial.name}</h3>
-                <p className="role">{testimonial.role}</p>
-                <p className="quote">"{testimonial.text}"</p>
-                <div className="rating">★★★★★</div>
-              </div>
-            ))}
-            {/* Duplicate set for continuous scrolling */}
-            {testimonials.map((testimonial, index) => (
-              <div 
-                key={`duplicate-${index}`} 
-                className="testimonial-card"
-              >
-                <div className="testimonial-image">
-                  <img src={testimonial.img} alt={`Client ${index + 1}`} />
-                </div>
-                <h3>{testimonial.name}</h3>
-                <p className="role">{testimonial.role}</p>
-                <p className="quote">"{testimonial.text}"</p>
-                <div className="rating">★★★★★</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+              ))}
+            </div>
+          </section>
 
-      <section className="founders">
-        <h2>Meet Our Founders</h2>
-        <div className="founders-grid">
-          {/* 
-          <div className="founder-card">
-            <img src={isru} alt="Founder 1" />
-            <h3>Israel Abebaw</h3>
-            <p>CEO & Co-founder</p>
-          </div>
-          */}
-          <div className="founder-card">
-            <img src={haile} alt="Founder 2" />
-            <h3>Haile Kinfu</h3>
-            <p>CTO & Co-founder</p>
-          </div>
-          <div className="founder-card">
-            <img src={miki} alt="Founder 3" />
-            <h3>Miki Shibabaw</h3>
-            <p>Lead Developer</p>
-          </div>
+          <section className="travel-gallery py-12 px-4 md:px-16 bg-white text-center">
+            <h2 className="text-3xl font-bold mb-2 text-gray-800">Travel Gallery</h2>
+            <p className="text-gray-600 mb-8">Capture the beauty of Ethiopia through our lens</p>
+            
+            <div className="gallery-grid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+              <img src={one} alt="Gallery One" className="rounded-lg shadow-md hover:scale-105 transition-transform duration-300" />
+              <img src={two} alt="Gallery Two" className="rounded-lg shadow-md hover:scale-105 transition-transform duration-300" />
+              <img src={three} alt="Gallery Three" className="rounded-lg shadow-md hover:scale-105 transition-transform duration-300" />
+              <img src={four} alt="Gallery Four" className="rounded-lg shadow-md hover:scale-105 transition-transform duration-300" />
+              <img src={five} alt="Gallery Five" className="rounded-lg shadow-md hover:scale-105 transition-transform duration-300" />
+              <img src={six} alt="Gallery Six" className="rounded-lg shadow-md hover:scale-105 transition-transform duration-300" />
+              <img src={seven} alt="Gallery Seven" className="rounded-lg shadow-md hover:scale-105 transition-transform duration-300" />
+              <img src={eight} alt="Gallery Eight" className="rounded-lg shadow-md hover:scale-105 transition-transform duration-300" />
+              <img src={nine} alt="Gallery Nine" className="rounded-lg shadow-md hover:scale-105 transition-transform duration-300" />
+              <img src={ten} alt="Traditional Dance" className="rounded-lg shadow-md hover:scale-105 transition-transform duration-300" />
+            </div>
+          </section>
+
+          <Features />
+
+          <section className="testimonials">
+            <h2>What Our Clients Say About Us</h2>
+            <div className="testimonial-nav">
+              <button className="nav-button prev" onClick={handlePrev}>
+                <span className="arrow">&#8249;</span>
+              </button>
+              <button className="nav-button next" onClick={handleNext}>
+                <span className="arrow">&#8250;</span>
+              </button>
+            </div>
+            <div className="testimonial-grid">
+              <div className="testimonial-slider" ref={sliderRef}>
+                {testimonials.map((testimonial, index) => (
+                  <div key={index} className="testimonial-card">
+                    <div className="testimonial-image">
+                      <img src={testimonial.img} alt={`Client ${index + 1}`} />
+                    </div>
+                    <h3>{testimonial.name}</h3>
+                    <p className="role">{testimonial.role}</p>
+                    <p className="quote">"{testimonial.text}"</p>
+                    <div className="rating">★★★★★</div>
+                  </div>
+                ))}
+                {testimonials.map((testimonial, index) => (
+                  <div key={`duplicate-${index}`} className="testimonial-card">
+                    <div className="testimonial-image">
+                      <img src={testimonial.img} alt={`Client ${index + 1}`} />
+                    </div>
+                    <h3>{testimonial.name}</h3>
+                    <p className="role">{testimonial.role}</p>
+                    <p className="quote">"{testimonial.text}"</p>
+                    <div className="rating">★★★★★</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="founders">
+            <h2>Meet Our Founders</h2>
+            <div className="founders-grid">
+              <div className="founder-card">
+                <img src={haile} alt="Founder 2" />
+                <h3>Haile Kinfu</h3>
+                <p>CTO & Co-founder</p>
+              </div>
+              <div className="founder-card">
+                <img src={miki} alt="Founder 3" />
+                <h3>Miki Shibabaw</h3>
+                <p>Lead Developer</p>
+              </div>
+            </div>
+          </section>
         </div>
-      </section>
-    </div>
       )}
     </>
   );
